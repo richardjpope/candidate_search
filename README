@@ -1,0 +1,16 @@
+This is a class and CLI for making speculative searches against the names of people standing for for Parliament. You should treat results in the same way you would any other search results, just because a name and a place matches, does not mean that it is the correct person, so common sense and human verification is required.
+
+It can handle google blog, web, video and news searches as well as twitter search.
+
+How it works:
+
+Google - it searches for the persons name in quotes, their constituency and a specified search term
+
+Twitter - It searches google for the person's name and constituency to try and find a twitter account. If it finds one it will then return tweets specified search term plus the username of the account. This is all is very slow and you are probably better of using tweetminster.co.uk.
+
+CLI documentation:
+
+php ppc-cli.php -s[your search term] -p[full party name] -m[web, blogs, video, news or twitter]
+
+Setup:
+The file data/ppcs.csv.ingit is an example file. You need to rename this to The file data/ppcs.csv and then go to http://www.yournextmp.com/data sign up for an API key and download the file called 'csv_contact_only' and copy it's contents into ppcs.csv.
